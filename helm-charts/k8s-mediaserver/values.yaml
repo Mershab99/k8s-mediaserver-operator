@@ -151,7 +151,7 @@ transmission:
       secretName: ""
   config:
     openvpn:
-      provider: "protonvpn"
+      provider: "PROTONVPN"
       config: ""
       username: ""
       password: ""
