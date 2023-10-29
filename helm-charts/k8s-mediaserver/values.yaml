@@ -150,6 +150,11 @@ transmission:
       enabled: false
       secretName: ""
   config:
+    openvpn:
+      provider: "protonvpn"
+      config: ""
+      username: ""
+      password: ""
     auth:
       enabled: false
       username: ""
@@ -301,3 +306,4 @@ jellyfin:
   #  accessModes: ReadWriteOnce
   #  storage: 5Gi
   #  selector: {}
+
