@@ -9,7 +9,7 @@ data:
     echo "### Initializing config ###"
     if [ ! -f /transmission-config/settings.json ]; then
       cp -n /init-transmission/settings.json /transmission-config/settings.json
-      cp -n /init-transmission/myvpn.ovpn /etc/openvpn/protonvpn/default.ovpn
+      cp -n /init-transmission/myvpn.ovpn /etc/openvpn/custom/myvpn.ovpn
       echo "### No configuration found, intialized with default settings ###"
     fi
   myvpn.ovpn: |
