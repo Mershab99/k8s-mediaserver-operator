@@ -170,6 +170,11 @@ spec:
             - name: mediaserver-volume
               mountPath: "/downloads"
               subPath: "{{ .Values.general.storage.subPaths.downloads }}"
+
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
           {{- with .Values.transmission.resources }}
           resources:
             {{- toYaml . | nindent 12 }}
@@ -195,10 +200,6 @@ spec:
       {{- with .Values.general.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
-      securityContext:
-        capabilities:
-          add:
-            - NET_ADMIN
       {{- end }}
 ---
 ### SERVICES
