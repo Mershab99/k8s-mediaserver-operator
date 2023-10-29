@@ -94,6 +94,11 @@ metadata:
 data:
   PGID: "{{ .Values.general.pgid }}"
   PUID: "{{ .Values.general.puid }}"
+  OPENVPN_PROVIDER: "{{ .Values.transmission.config.openvpn.provider }}"
+  OPENVPN_CONFIG: "{{ .Values.transmission.config.openvpn.config }}"
+  OPENVPN_USERNAME: "{{ .Values.transmission.config.openvpn.username }}"
+  OPENVPN_PASSWORD: "{{ .Values.transmission.config.openvpn.password }}"
+  LOCAL_NETWORK: "192.168.0.0/16"
 ---
 ### DEPLOYMENT
 apiVersion: apps/v1
