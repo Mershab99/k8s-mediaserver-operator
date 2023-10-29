@@ -195,6 +195,10 @@ spec:
       {{- with .Values.general.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
+      securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
       {{- end }}
 ---
 ### SERVICES
