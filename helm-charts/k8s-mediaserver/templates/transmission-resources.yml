@@ -13,7 +13,6 @@ data:
       echo "### No configuration found, intialized with default settings ###"
     fi
   myvpn.ovpn: |
-
     # ==============================================================================
     # Copyright (c) 2023 Proton AG (Switzerland)
     # Email: contact@protonvpn.com
