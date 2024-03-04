@@ -187,7 +187,7 @@ spec:
 {{ end }}
   ingressClassName: {{ .Values.general.ingress.ingressClassName }}
   rules:
-    - host: {{ .Values.general.ingress_host | quote }}
+    - host: radarr-{{ .Values.general.ingress_host }}
       http:
         paths:
           - path: {{ .Values.radarr.ingress.path }}

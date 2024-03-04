@@ -185,7 +185,7 @@ spec:
 {{ end }}
   ingressClassName: {{ .Values.general.ingress.ingressClassName }}
   rules:
-    - host: {{ .Values.general.ingress_host | quote }}
+    - host: sonarr-{{ .Values.general.ingress_host }}
       http:
         paths:
           - path: {{ .Values.sonarr.ingress.path }}

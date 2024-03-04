@@ -178,7 +178,7 @@ spec:
 {{ end }}
   ingressClassName: {{ .Values.general.ingress.ingressClassName }}
   rules:
-    - host: {{ .Values.general.ingress_host | quote }}
+    - host: prowlarr-{{ .Values.general.ingress_host }}
       http:
         paths:
           - path: {{ .Values.prowlarr.ingress.path }}
