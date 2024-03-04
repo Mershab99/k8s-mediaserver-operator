@@ -294,7 +294,7 @@ spec:
               subPath: "{{ .Values.general.storage.subPaths.config }}/transmission"
           {{ end }}
             - name: mediaserver-volume
-              mountPath: "/downloads"
+              mountPath: "/data"
               subPath: "{{ .Values.general.storage.subPaths.downloads }}"
 
           securityContext:
