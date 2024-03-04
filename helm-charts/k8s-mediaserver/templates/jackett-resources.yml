@@ -179,7 +179,7 @@ spec:
 {{ end }}
   ingressClassName: {{ .Values.general.ingress.ingressClassName }}
   rules:
-    - host: {{ .Values.general.ingress_host | quote }}
+    - host: jackett-{{ .Values.general.ingress_host | quote }}
       http:
         paths:
           - path: {{ .Values.jackett.ingress.path }}
