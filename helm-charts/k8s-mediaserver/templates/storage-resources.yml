@@ -221,6 +221,7 @@ spec:
   {{- toYaml . | nindent 4 }}
   {{- end }}
 {{- end }}
+{{- with .Values.jellyfin.volume }}
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -246,4 +247,3 @@ spec:
   {{- toYaml . | nindent 4 }}
   {{- end }}
 {{- end }}
-{{- with .Values.jellyfin.volume }}
