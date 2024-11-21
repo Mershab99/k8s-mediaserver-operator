@@ -27,7 +27,7 @@ spec:
         {{- include "k8s-mediaserver.selectorLabels" . | nindent 8 }}
         app: jellyfin
     spec:
-      runtimeClass: nvidia
+      runtimeClassName: nvidia
       volumes:
         {{- if not .Values.general.storage.customVolume }}
         - name: mediaserver-volume
