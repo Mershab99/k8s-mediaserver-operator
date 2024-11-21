@@ -9,6 +9,7 @@ data:
   PGID: "{{ .Values.general.pgid }}"
   PUID: "{{ .Values.general.puid }}"  
 ---
+### DEPLOYMENT
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -72,8 +73,8 @@ spec:
               mountPath: /tv
               subPath: "{{ .Values.general.storage.subPaths.tv }}"
           {{- with .Values.jellyfin.resources }}
-            resources:
-              {{- toYaml . | nindent 14 }}
+          resources:
+            {{- toYaml . | nindent 12 }}
           {{- end }}
       {{- with .Values.general.nodeSelector }}
       nodeSelector:
