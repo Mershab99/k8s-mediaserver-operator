@@ -73,11 +73,11 @@ spec:
             - name: mediaserver-volume
               mountPath: /tv
               subPath: "{{ .Values.general.storage.subPaths.tv }}"
-          resources: {}
-#            requests:
-#              nvidia.com/gpu: 1
-#            limits:
-#              nvidia.com/gpu: 1
+          resources: 
+            requests:
+              nvidia.com/gpu: 1
+            limits:
+              nvidia.com/gpu: 1
       {{- with .Values.general.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
