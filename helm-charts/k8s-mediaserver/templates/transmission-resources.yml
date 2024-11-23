@@ -225,6 +225,7 @@ data:
   OPENVPN_USERNAME: "{{ .Values.transmission.config.openvpn.username }}"
   OPENVPN_PASSWORD: "{{ .Values.transmission.config.openvpn.password }}"
   LOCAL_NETWORK: "{{ .Values.transmission.config.openvpn.network }}"
+  GLOBAL_APPLY_PERMISSIONS: "false"
 ---
 ### DEPLOYMENT
 apiVersion: apps/v1
